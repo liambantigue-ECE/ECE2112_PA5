@@ -69,13 +69,17 @@ To perform Cramer's rule we must first get the determinant of matrix A, so we us
 ```
 A = [2 -1 3 2; 1 4 -2 1; 3 2 1 -1; -2 3 4 2];
 detA = det(A);
-OUTPUT: Determinant of A: 280
 ```
-Remember to perform Cramer's rule, we must replace the columns of detA one-by-one with vector b then get its determinant. Because we have four equations, we have to replace the columns four times and get their respective determinants four times also, and then we divide our four new determinants by detA so its like<br> [det(A1)/det(A)]<br>
-[det(A2)/det(A)]<br>
-[det(A3)/det(A)]<br>
-[det(A4)/det(A)]<br>
-This code basically automates it so we do not have to type the values manually all the time.
+OUTPUT: <img width="100" height="29" alt="image" src="https://github.com/user-attachments/assets/d01f6283-2741-477a-9233-168d9685ecf6" />
+
+Remember to perform Cramer's rule, we must replace the columns of detA one-by-one with vector b then get its determinant. Because we have four equations, we have to replace the columns four times and get their respective determinants four times also, and then we divide our four new determinants by detA so its like<br> 
+```
+det(A1)/det(A)
+det(A2)/det(A)
+det(A3)/det(A)
+det(A4)/det(A)
+```
+The code below basically automates it so we do not have to type the values manually all the time.
 ```
 n = length(b);
 x_cramer = zeros(n, 1);
